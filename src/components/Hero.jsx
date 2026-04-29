@@ -617,7 +617,7 @@ export default function Hero({ isDark }) {
           }}
         >
           <span className="relative z-10 flex items-center gap-3">
-            Explore Projects
+            View My Work
             <svg
               width="15"
               height="15"

@@ -209,6 +209,7 @@ export default function About() {
           box-shadow: 0 0 25px var(--amber-glow);
           display: block;
           animation: avatarFloat 4s ease-in-out infinite;
+          will-change: transform;
         }
 
         .about-section .about-bio {

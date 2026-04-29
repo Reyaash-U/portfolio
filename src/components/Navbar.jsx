@@ -155,8 +155,8 @@ export default function Navbar({ isDark, setIsDark }) {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div
-          className="fixed inset-0 z-999 flex flex-col items-center justify-center gap-8 backdrop-blur-2xl pt-20 transition-all duration-500"
-          style={{ backgroundColor: 'var(--bg)' }}
+          className="fixed inset-0 z-999 flex flex-col items-center justify-center gap-8 pt-20 transition-all duration-500"
+          style={{ backgroundColor: 'var(--bg)', opacity: 0.98 }}
         >
           {navLinks.map((link) => {
             const isActive = activeSection === link.id;

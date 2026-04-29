@@ -1,5 +1,5 @@
 /* Global Styles for React Portfolio */
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;700;900&family=Inter:wght@400;500&display=swap');
+/* Fonts loaded via <link> in index.html — no duplicate @import here */
 
 /* All CSS variables live in index.css — do NOT define :root vars here */
 
