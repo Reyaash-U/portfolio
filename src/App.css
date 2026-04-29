@@ -1,0 +1,118 @@
+/* Global Styles for React Portfolio */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;700;900&family=Inter:wght@400;500&display=swap');
+
+/* All CSS variables live in index.css — do NOT define :root vars here */
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, nav, button, .font-head {
+  font-family: 'Sora', sans-serif;
+}
+
+h1 {
+  font-size: clamp(48px, 7vw, 80px) !important;
+  font-weight: 700 !important;
+}
+
+h2 {
+  font-size: clamp(36px, 5vw, 64px) !important;
+  font-weight: 700 !important;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ── Project Card 3D Flip ── */
+.project-card-container {
+  perspective: 1500px;
+  height: 480px;
+}
+
+.project-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.15);
+  transform-style: preserve-3d;
+}
+
+.project-card-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.project-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.project-face-back {
+  transform: rotateY(180deg);
+}
+
+.pcard {
+  background: var(--card-bg);
+}
+
+/* ── Contact Form ── */
+.contact-form-card {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  box-shadow:
+    0 1px 2px rgba(0,0,0,0.05),
+    0 4px 6px rgba(0,0,0,0.03),
+    0 12px 30px rgba(0,0,0,0.08);
+  transition: transform 0.5s var(--ease-premium), box-shadow 0.5s var(--ease-premium);
+}
+
+.contact-input {
+  display: block;
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--input-text);
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.contact-input:hover {
+  border-color: rgba(232,114,12,0.25);
+}
+
+.contact-input:focus {
+  border-color: var(--input-focus);
+  background: var(--bg);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04), 0 0 0 3px rgba(232,114,12,0.08);
+}
+
+.contact-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 6px;
+  margin-left: 2px;
+}
